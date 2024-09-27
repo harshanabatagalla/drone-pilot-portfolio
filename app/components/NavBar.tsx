@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'; // Use from next/navig
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import {social_media_links } from '../data/data'
+import { social_media_links } from '../data/data'
 
 const NavBar = () => {
   const router = useRouter(); // Get the current route
@@ -22,11 +22,11 @@ const NavBar = () => {
   const isActive = (path: string) => pathname === path; // In app directory, use pathname to get current route
 
   return (
-    <div className="drawer-end text-md font-bold fixed top-0 left-0 right-0 uppercase z-50">
+    <div className="drawer-end text-md font-bold fixed top-0 left-0 right-0 uppercase z-50 ">
       <input id="mobile-menu" type="checkbox" className="drawer-toggle" ref={checkboxRef} />
       <div className="drawer-content flex flex-col ">
         {/* Navbar */}
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 backdrop-blur-lg bg-opacity-70">
           <div className="mx-2 px-2 grow">
             <Link href="/" onClick={closeDrawer} >
               Sankalpa Bandara
@@ -67,9 +67,10 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+      <hr className="border-t-[1px] border-gray-300 opacity-10" />
       <div className="drawer-side">
         <label htmlFor="mobile-menu" aria-label="close sidebar" className="drawer-overlay"></label>
-        <div className="menu bg-base-200 min-h-full w-80 p-4">
+        <div className="menu bg-base-100 min-h-full w-80 p-4 backdrop-blur-lg bg-opacity-50">
           <label htmlFor="mobile-menu" className="btn btn-square btn-ghost absolute right-4">
             <FontAwesomeIcon icon={faXmark} />
           </label>
@@ -95,7 +96,7 @@ const NavBar = () => {
           </ul>
           <Link href='/booking' className="btn btn-primary btn-sm mx-4 w-32" onClick={closeDrawer}>Book Now</Link>
           <div className="social-icons p-4 mt-2">
-          <a className='mx-2 hover:text-primary' href={social_media_links.facebook} target='_blank'>
+            <a className='mx-2 hover:text-primary' href={social_media_links.facebook} target='_blank'>
               <FontAwesomeIcon icon={faFacebook} size='xl' />
             </a>
             <a className='mx-2 hover:text-primary' href={social_media_links.instagram} target='_blank'>

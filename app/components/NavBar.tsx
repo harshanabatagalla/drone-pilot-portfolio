@@ -2,8 +2,10 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'; // Use from next/navigation instead of next/router
-import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import './NavBar.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import {social_media_links } from '../data/data'
 
 const NavBar = () => {
   const router = useRouter(); // Get the current route
@@ -32,7 +34,7 @@ const NavBar = () => {
           </div>
           <div className="flex-none lg:hidden">
             <label htmlFor="mobile-menu" aria-label="open sidebar" className="btn btn-square btn-ghost">
-              <Bars3Icon className="size-6" />
+              <FontAwesomeIcon icon={faBars} size="lg" />
             </label>
           </div>
           <div className="hidden lg:block grow">
@@ -51,8 +53,17 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex-none lg:block hidden">
-            <Link href='/booking' className="btn btn-primary btn-outline" onClick={closeDrawer}>Book Now</Link>
+          <div className="flex-none lg:block hidden gap-3">
+            <a className='mx-2 hover:text-primary' href={social_media_links.facebook} target='_blank'>
+              <FontAwesomeIcon icon={faFacebook} size='lg' />
+            </a>
+            <a className='mx-2 hover:text-primary' href={social_media_links.instagram} target='_blank'>
+              <FontAwesomeIcon icon={faInstagram} size='lg' />
+            </a>
+            <a className='mx-2 hover:text-primary' href={social_media_links.tiktok} target='_blank'>
+              <FontAwesomeIcon icon={faTiktok} size='lg' />
+            </a>
+            <Link href='/booking' className="btn btn-primary btn-outline ml-4" onClick={closeDrawer}>Book Now</Link>
           </div>
         </div>
       </div>
@@ -60,7 +71,7 @@ const NavBar = () => {
         <label htmlFor="mobile-menu" aria-label="close sidebar" className="drawer-overlay"></label>
         <div className="menu bg-base-200 min-h-full w-80 p-4">
           <label htmlFor="mobile-menu" className="btn btn-square btn-ghost absolute right-4">
-            <XMarkIcon className="size-6" />
+            <FontAwesomeIcon icon={faXmark} />
           </label>
           {/* Sidebar content here */}
           <ul className="menu text-base-content min-h-full p-4 mt-5 gap-1">
@@ -82,7 +93,18 @@ const NavBar = () => {
               <Link href="/contact" onClick={closeDrawer}>Contact</Link>
             </li>
           </ul>
-          <Link href='/booking' className="btn btn-primary mx-4 w-32" onClick={closeDrawer}>Book Now</Link>
+          <Link href='/booking' className="btn btn-primary btn-sm mx-4 w-32" onClick={closeDrawer}>Book Now</Link>
+          <div className="social-icons p-4 mt-2">
+          <a className='mx-2 hover:text-primary' href={social_media_links.facebook} target='_blank'>
+              <FontAwesomeIcon icon={faFacebook} size='xl' />
+            </a>
+            <a className='mx-2 hover:text-primary' href={social_media_links.instagram} target='_blank'>
+              <FontAwesomeIcon icon={faInstagram} size='xl' />
+            </a>
+            <a className='mx-2 hover:text-primary' href={social_media_links.tiktok} target='_blank'>
+              <FontAwesomeIcon icon={faTiktok} size='xl' />
+            </a>
+          </div>
         </div>
       </div>
     </div>

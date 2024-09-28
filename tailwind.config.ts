@@ -11,15 +11,6 @@ const config: Config = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
-      container: {
-        padding: {
-          DEFAULT: '2rem',
-          sm: '3rem',
-          lg: '5rem',
-          xl: '6rem',
-          '2xl': '7rem',
-        },
-      },
       keyframes: {
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(40px)' },
@@ -36,7 +27,7 @@ const config: Config = {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ["cupcake","bumblebee","dark","dim"],
+    themes: ["cupcake", "bumblebee", "dark", "dim"],
   },
 }
 export default config

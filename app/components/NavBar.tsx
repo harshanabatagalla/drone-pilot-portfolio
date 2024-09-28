@@ -82,12 +82,12 @@ const NavBar = () => {
             <li className={isActive('/services') ? 'text-primary' : ''}>
               <Link href="/services" onClick={closeDrawer}>Services</Link>
             </li>
-            <li className={isActive('/portfolio') ? 'text-primary' : ''}>
-              <Link href="/portfolio" onClick={closeDrawer}>Portfolio</Link>
+            <li>
+              <Link href="/portfolio" onClick={closeDrawer} className={isActive('/portfolio') ? 'text-primary' : ''}>Portfolio</Link>
               <ul className="p-2">
-                <li><Link href="/portfolio/#projects" onClick={closeDrawer}>Projects</Link></li>
-                <li><Link href="/portfolio/#clients" onClick={closeDrawer}>Our Clients</Link></li>
-                <li><Link href="/portfolio/#testimonials" onClick={closeDrawer}>Testimonials</Link></li>
+                <li className={isActive('/portfolio#projects') ? 'text-primary' : ''}><Link href="/portfolio/#projects" onClick={closeDrawer}>Projects</Link></li>
+                <li className={isActive('/portfolio#clieents') ? 'text-primary' : ''}><Link href="/portfolio/#clients" onClick={closeDrawer}>Our Clients</Link></li>
+                <li className={isActive('/portfolio#testimonials') ? 'text-primary' : ''}><Link href="/portfolio/#testimonials" onClick={closeDrawer}>Testimonials</Link></li>
               </ul>
             </li>
             <li className={isActive('/contact') ? 'text-primary' : ''}>

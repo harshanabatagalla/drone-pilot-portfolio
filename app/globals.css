@@ -29,7 +29,7 @@ body {
 }
 
 .section {
-  @apply px-12 py-12 sm:px-12 sm:py-12 lg:px-20 lg:py-20 xl:px-28 xl:py-28 2xl:px-36 2xl:py-36;
+  @apply px-12 py-10 sm:px-12 sm:py-10 lg:px-20 lg:py-12 xl:px-28 xl:py-20 2xl:px-36 2xl:py-28;
 }
 
 .btn {

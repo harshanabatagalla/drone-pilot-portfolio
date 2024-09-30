@@ -17,7 +17,7 @@ const Section = ({ title, description, footer, children, className }: SectionPro
                 </h1>
             }
             {description &&
-                <p className='text-sm sm:text-base md:text-sm lg:text-lg xl:text-xl font-extralight mt-4 sm:w-4/5 w-full' >
+                <p className='text-sm sm:text-base md:text-sm lg:text-lg xl:text-xl font-extralight my-4 sm:w-4/5 w-full' >
                     {description}
                 </p>}
             {children && <div>{children}</div>}

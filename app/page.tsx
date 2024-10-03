@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import Section from './components/Section'
 import { aboutMe } from './data/data'
 import ExperienceCard from './components/ExperienceCard'
+import EquipmentsCarousel from './components/EquipmentsCarousel'
 
 export default function Home() {
   return (
@@ -24,6 +25,14 @@ export default function Home() {
           ))}
         </div>
       </Section>
+      <Section
+        title="Equipments"
+        description="I use the latest drone technology, including the Dji Air 3, to ensure high-quality footage, precision, and safety in every flight."
+      >
+        <EquipmentsCarousel />
+      </Section>
     </main>
   )
 }
+
+// #B2CCD6

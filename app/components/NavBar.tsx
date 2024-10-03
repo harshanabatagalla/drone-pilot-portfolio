@@ -26,7 +26,7 @@ const NavBar = () => {
       <input id="mobile-menu" type="checkbox" className="drawer-toggle" ref={checkboxRef} />
       <div className="drawer-content flex flex-col ">
         {/* Navbar */}
-        <div className="navbar bg-base-100 backdrop-blur-lg bg-opacity-70">
+        <div className="navbar bg-base-100 backdrop-blur-lg bg-opacity-60">
           <div className="mx-2 px-2 grow">
             <Link href="/" onClick={closeDrawer} >
               Sankalpa Bandara
@@ -70,7 +70,7 @@ const NavBar = () => {
       <hr className="border-t-[1px] border-gray-300 opacity-10" />
       <div className="drawer-side">
         <label htmlFor="mobile-menu" aria-label="close sidebar" className="drawer-overlay"></label>
-        <div className="menu bg-base-100 min-h-full w-80 p-4 backdrop-blur-lg bg-opacity-50">
+        <div className="menu bg-base-100 min-h-full w-80 p-4 backdrop-blur-md bg-opacity-40">
           <label htmlFor="mobile-menu" className="btn btn-square btn-ghost absolute right-4">
             <FontAwesomeIcon icon={faXmark} />
           </label>

@@ -8,9 +8,9 @@ interface ExperienceCardProps {
   sort?: number
 }
 
-const ExperienceCard = ( {title, description, svg, sort }: ExperienceCardProps ) => {
+const ExperienceCard = ( {title, description, svg, sort = 0 }: ExperienceCardProps ) => {
   return (
-    <div className='bg-base-300 lg:w-1/3 rounded-md my-4 p-8'>
+    <div className='bg-base-300 lg:w-1/3 rounded-box my-4 p-8 animate-slideInFromBottom' style={{ animationDelay: `${sort * 0.2}s` }}>
       <div className="grid grid-cols-1 sm:grid-cols-5 gap-6">
         <div className='col-span-1 sm:col-span-1'>
           <img

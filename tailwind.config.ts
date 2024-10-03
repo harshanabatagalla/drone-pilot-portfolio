@@ -8,13 +8,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInFromRight: {
+          '0%': { opacity: '0', transform: 'translateX(40px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInFromBottom: {
+          '0%': { opacity: '0', transform: 'translateY(200px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        fadeInUp: 'fadeInUp 0.8s 0.5s ease-out both',
+        slideInFromRight: 'slideInFromRight 0.8s 0.5s ease-out forwards',
+        slideInFromBottom: 'slideInFromBottom 0.6s ease-out forwards',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ["cupcake", "bumblebee", "dark", "dim"],
+  },
 }
 export default config
